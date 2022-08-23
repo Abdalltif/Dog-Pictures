@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.abdullateif.dogpictures.R
 import com.abdullateif.dogpictures.common.UIState
@@ -98,6 +99,8 @@ class DogBreedsFragment : Fragment(R.layout.fragment_dog_breeds), DogBreedsAdapt
     }
 
     private fun openBreedImagesScreen(breedName: String) {
+        val action = DogBreedsFragmentDirections.actionDogBreedsFragmentToDogBreedImagesFragment(breedName)
+        findNavController().navigate(action)
     }
 
     private fun openFavoriteImagesScreen() {

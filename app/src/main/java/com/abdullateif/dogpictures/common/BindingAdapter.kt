@@ -4,8 +4,11 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.abdullateif.dogpictures.data.model.DogBreed
+import com.abdullateif.dogpictures.data.model.DogBreedImage
+import com.abdullateif.dogpictures.ui.breed_images.DogBreedImagesAdapter
 import com.abdullateif.dogpictures.ui.dog_breeds.DogBreedsAdapter
 import com.abdullateif.dogpictures.ui.dog_breeds.DogBreedsState
+import com.abdullateif.dogpictures.ui.breed_images.DogBreedImagesState
 import com.bumptech.glide.Glide
 
 object BindingAdapter {
@@ -26,6 +29,18 @@ object BindingAdapter {
             state?.let { dogBreedsState ->
                 if (dogBreedsState.uiState == UIState.DATA)
                     adapter.setList(dogBreedsState.breeds as List<DogBreed>)
+            }
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("imageState")
+    fun setImagesRecyclerViewProperties(recyclerView: RecyclerView, state: DogBreedImagesState?) {
+        if (recyclerView.adapter is DogBreedImagesAdapter) {
+            val adapter = recyclerView.adapter as DogBreedImagesAdapter
+            state?.let { imagesState ->
+                if (imagesState.uiState == UIState.DATA)
+                    adapter.setList(imagesState.images as List<DogBreedImage>)
             }
         }
     }
