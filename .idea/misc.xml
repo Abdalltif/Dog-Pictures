@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/white_favorite_24.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18342391304347827" />
+        <entry key="app/src/main/res/layout/fragment_dog_breeds.xml" value="0.18342391304347827" />
+        <entry key="app/src/main/res/layout/list_item_dog_breed.xml" value="0.18342391304347827" />
+        <entry key="app/src/main/res/menu/dog_menu.xml" value="0.2864583333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

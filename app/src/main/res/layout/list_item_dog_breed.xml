@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="dogBreed"
+            type="com.abdullateif.dogpictures.data.model.DogBreed" />
+    </data>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp">
+
+            <TextView
+                android:id="@+id/txt_dog_breed"
+                android:textSize="20sp"
+                android:text="@{dogBreed.name}"
+                android:layout_gravity="start"
+                android:padding="22dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+</layout>
