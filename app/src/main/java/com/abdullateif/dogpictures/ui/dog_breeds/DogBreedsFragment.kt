@@ -104,5 +104,7 @@ class DogBreedsFragment : Fragment(R.layout.fragment_dog_breeds), DogBreedsAdapt
     }
 
     private fun openFavoriteImagesScreen() {
+        val action = DogBreedsFragmentDirections.actionDogBreedsFragmentToFavoriteImagesFragment()
+        findNavController().navigate(action)
     }
 }

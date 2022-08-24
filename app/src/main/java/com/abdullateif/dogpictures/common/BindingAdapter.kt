@@ -5,10 +5,13 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.abdullateif.dogpictures.data.model.DogBreed
 import com.abdullateif.dogpictures.data.model.DogBreedImage
+import com.abdullateif.dogpictures.data.model.FavoriteImage
 import com.abdullateif.dogpictures.ui.breed_images.DogBreedImagesAdapter
 import com.abdullateif.dogpictures.ui.dog_breeds.DogBreedsAdapter
 import com.abdullateif.dogpictures.ui.dog_breeds.DogBreedsState
 import com.abdullateif.dogpictures.ui.breed_images.DogBreedImagesState
+import com.abdullateif.dogpictures.ui.favorite_images.FavoriteImagesAdapter
+import com.abdullateif.dogpictures.ui.favorite_images.FavoriteImagesState
 import com.bumptech.glide.Glide
 
 object BindingAdapter {
@@ -41,6 +44,18 @@ object BindingAdapter {
             state?.let { imagesState ->
                 if (imagesState.uiState == UIState.DATA)
                     adapter.setList(imagesState.images as List<DogBreedImage>)
+            }
+        }
+    }
+
+    @JvmStatic
+    @BindingAdapter("favState")
+    fun setFavImagesRecyclerViewProperties(recyclerView: RecyclerView, state: FavoriteImagesState?) {
+        if (recyclerView.adapter is FavoriteImagesAdapter) {
+            val adapter = recyclerView.adapter as FavoriteImagesAdapter
+            state?.let { state ->
+                if (state.uiState == UIState.DATA)
+                    adapter.setList(state.images as List<FavoriteImage>)
             }
         }
     }

@@ -7,8 +7,10 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18342391304347827" />
         <entry key="app/src/main/res/layout/fragment_dog_breed_images.xml" value="0.18342391304347827" />
         <entry key="app/src/main/res/layout/fragment_dog_breeds.xml" value="0.18342391304347827" />
+        <entry key="app/src/main/res/layout/fragment_favorite_images.xml" value="0.18342391304347827" />
         <entry key="app/src/main/res/layout/list_item_breed_image.xml" value="0.18342391304347827" />
         <entry key="app/src/main/res/layout/list_item_dog_breed.xml" value="0.18342391304347827" />
+        <entry key="app/src/main/res/layout/list_item_fav_image.xml" value="0.18342391304347827" />
         <entry key="app/src/main/res/menu/dog_menu.xml" value="0.2864583333333333" />
       </map>
     </option>

@@ -7,20 +7,31 @@
     <fragment
         android:id="@+id/dogBreedsFragment"
         android:name="com.abdullateif.dogpictures.ui.dog_breeds.DogBreedsFragment"
-        android:label="DogBreedsFragment" >
+        android:label="Dog Breeds" >
         <action
             android:id="@+id/action_dogBreedsFragment_to_dogBreedImagesFragment"
             app:destination="@id/dogBreedImagesFragment" />
+        <action
+            android:id="@+id/action_dogBreedsFragment_to_favoriteImagesFragment"
+            app:destination="@id/favoriteImagesFragment" />
     </fragment>
     <fragment
         android:id="@+id/dogBreedImagesFragment"
         android:name="com.abdullateif.dogpictures.ui.breed_images.DogBreedImagesFragment"
-        android:label="DogBreedImagesFragment" >
+        android:label="Breed Images" >
         <action
             android:id="@+id/action_dogBreedImagesFragment_to_dogBreedsFragment"
             app:destination="@id/dogBreedsFragment" />
         <argument
             android:name="breedName"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteImagesFragment"
+        android:name="com.abdullateif.dogpictures.ui.favorite_images.FavoriteImagesFragment"
+        android:label="Favorite Images" >
+        <action
+            android:id="@+id/action_favoriteImagesFragment_to_dogBreedsFragment"
+            app:destination="@id/dogBreedsFragment" />
     </fragment>
 </navigation>
