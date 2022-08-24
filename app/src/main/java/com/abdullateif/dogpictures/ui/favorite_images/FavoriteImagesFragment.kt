@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
+import com.abdullateif.dogpictures.R
 import com.abdullateif.dogpictures.R.*
 import com.abdullateif.dogpictures.common.UIState
 import com.abdullateif.dogpictures.databinding.FragmentFavoriteImagesBinding
@@ -70,7 +71,7 @@ class FavoriteImagesFragment : Fragment(layout.fragment_favorite_images), Favori
     }
 
     private fun handleFilters(breeds: List<String>) {
-        addChip("All")
+        addChip(getString(string.all))
         for (name in breeds)
             addChip(name)
     }
@@ -107,12 +108,12 @@ class FavoriteImagesFragment : Fragment(layout.fragment_favorite_images), Favori
         val alertDialog: AlertDialog? = activity?.let {
             val builder = AlertDialog.Builder(it)
             builder.apply {
-                setTitle("Remove image?")
-                setPositiveButton("Ok") { _, _ ->
+                setTitle(getString(string.remove_image))
+                setPositiveButton(string.ok) { _, _ ->
                     viewModel.unFavImage(imgUrl)
                     binding.chipGroup.removeAllViews()
                 }
-                setNegativeButton("Cancel") { dialog, _ ->
+                setNegativeButton(string.cancel) { dialog, _ ->
                     dialog.cancel()
                 }
             }

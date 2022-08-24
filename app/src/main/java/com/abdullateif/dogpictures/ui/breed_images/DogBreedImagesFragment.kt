@@ -102,11 +102,11 @@ class DogBreedImagesFragment : Fragment(R.layout.fragment_dog_breed_images), Dog
         val alertDialog: AlertDialog? = activity?.let {
             val builder = AlertDialog.Builder(it)
             builder.apply {
-                setTitle("Save to favorites?")
-                setPositiveButton("Ok") { _, _ ->
+                setTitle(getString(R.string.save_to_favorites))
+                setPositiveButton(getString(R.string.ok)) { _, _ ->
                     viewModel.saveFavoriteImage(favImage)
                 }
-                setNegativeButton("Cancel") { dialog, id ->
+                setNegativeButton(getString(R.string.cancel)) { dialog, id ->
                     dialog.cancel()
                 }
             }
