@@ -48,7 +48,7 @@ class DogBreedImagesViewModel @Inject constructor(
         }
     }
 
-    fun favImage(image: FavoriteImage){
+    fun saveFavoriteImage(image: FavoriteImage){
         _uiState.value = DogBreedImagesState(
             uiState = UIState.LOADING
         )

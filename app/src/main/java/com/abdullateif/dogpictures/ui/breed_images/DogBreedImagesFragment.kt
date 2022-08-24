@@ -104,7 +104,7 @@ class DogBreedImagesFragment : Fragment(R.layout.fragment_dog_breed_images), Dog
             builder.apply {
                 setTitle("Save to favorites?")
                 setPositiveButton("Ok") { _, _ ->
-                    viewModel.favImage(favImage)
+                    viewModel.saveFavoriteImage(favImage)
                 }
                 setNegativeButton("Cancel") { dialog, id ->
                     dialog.cancel()
